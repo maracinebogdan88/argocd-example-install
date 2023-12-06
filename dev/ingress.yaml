@@ -16,4 +16,4 @@ spec:
                 # Reference to a Service name, also specified in the Rollout spec.strategy.canary.stableService field
                 name: rollouts-demo-svc
                 port:
-                  number: 80
+                  number: 30000
