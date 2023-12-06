@@ -1,11 +1,11 @@
-apiVersion: v1
+apiVersion: v1  # Added missing line
 kind: Service
 metadata:
   name: express-app-svc
 spec:
   ports:
-    - port: 30000  # The port exposed on nodes
-      targetPort: port-3000 # The port your application is running on
+    - port: 3000  # The port exposed on nodes
+      targetPort: port-3000  # Corrected the indentation
       protocol: TCP
       name: port-3000
   selector:

@@ -16,4 +16,4 @@ spec:
                 # Reference to a Service name, also specified in the Rollout spec.strategy.canary.stableService field
                 name: express-app-svc
                 port:
-                  number: 30000
+                  number: 3000  # Corrected the indentation
