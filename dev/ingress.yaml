@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: server.local
+    - host: express-server.local
       http:
         paths:
           - path: /
