@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: rollouts-demo-stable
+  name: express-app-stable
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
@@ -14,6 +14,6 @@ spec:
             backend:
               service:
                 # Reference to a Service name, also specified in the Rollout spec.strategy.canary.stableService field
-                name: rollouts-demo-svc
+                name: express-app-svc
                 port:
                   number: 30000

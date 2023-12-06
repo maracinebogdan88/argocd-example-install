@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rollouts-demo-deployment
+  name: express-app-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: rollouts-demo
+      app: express-app
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -15,10 +15,10 @@ spec:
   template:
     metadata:
       labels:
-        app: rollouts-demo
+        app: express-app
     spec:
       containers:
-        - name: rollouts-demo-container
+        - name: express-app-container
           image: maracinebogdan88/hello-world-expressjs
           ports:
             - name: http
@@ -36,9 +36,9 @@ spec:
               path: /
               port: 3000
             initialDelaySeconds: 20
-            failureThreshold: 3
+            failureThreshold: 5
             successThreshold: 1
-            periodSeconds: 2
+            periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /

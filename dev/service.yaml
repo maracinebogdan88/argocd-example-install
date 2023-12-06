@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rollouts-demo-svc
+  name: express-app-svc
 spec:
   type: NodePort
   ports:
@@ -10,4 +10,4 @@ spec:
       protocol: TCP
       name: port-3000
   selector:
-    app: rollouts-demo
+    app: express-app
