@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: express-app-svc
 spec:
-  type: NodePort
   ports:
     - port: 30000  # The port exposed on nodes
       targetPort: port-3000 # The port your application is running on
